@@ -1,75 +1,58 @@
-[<img src="https://assets.signaloid.io/add-to-signaloid-cloud-logo-dark-v6.png#gh-dark-mode-only" alt="[Add to signaloid.io]" height="30">](https://signaloid.io/repositories?connect=https://github.com/signaloid/Signaloid-Demo-General-CXX#gh-dark-mode-only)
-[<img src="https://assets.signaloid.io/add-to-signaloid-cloud-logo-light-v6.png#gh-light-mode-only" alt="[Add to signaloid.io]" height="30">](https://signaloid.io/repositories?connect=https://github.com/signaloid/Signaloid-Demo-General-CXX#gh-light-mode-only)
+Stealing Ethereum: How L2 Architecture Becomes Enterprise Infrastructure
+You do not need to build a blockchain to use blockchain architecture.
 
-# C++ Project Template for the Signaloid Cloud Developer Platform
-This is a minimal example to get you started with setting up C++ repositories in GitHub that you can then run on the Signaloid Cloud Developer Platform. The repository contains a C++ source file in the `src` folder which gets compiled and executed by the Signaloid Cloud Developer Platform.
+This repository contains the Wavelink Editorial Architecture Brief (v1.0) — a critical, sourced, and reviewable framework that translates Ethereum's most-tested architectural patterns into decisions a technical leader can make tomorrow.
 
-## Getting Started
-1. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repository.
-2. Edit `README.md` to [adapt the “Add to signaloid.io” button's URL](#option-1--using-the-add-to-signaloidio-button).
-3. Edit the code and [configure the build](#configuring-the-build-configmk).
+Architecture BriefEditorial DraftLicenseReferences
 
-## Repository Structure
-The Signaloid Cloud Developer Platform expects any GitHub repository you wish to run to have a `src` folder containing your source code. By default, the Signaloid Cloud Developer Platform will compile all C and C++ source files (extensions `*.c`, `*.cc`, `*.cpp`, `*.c++`, `*.cp`, and `*.cxx`) in the `src` folder and will link them into a single binary and run that on your choice of uncertainty-tracking processor.
+📌 The Thesis
+Most blockchain analysis stays inside blockchain. This document does not teach you Ethereum; it uses Ethereum's architecture as a body of solved problems — a tested catalogue of design moves for trust, sequencing, evidence, settlement, and verification.
 
-### Configuring the Build (`config.mk`)
-You can modify the default build behavior described above by providing a file named `config.mk`.
+We steal these moves for use in enterprise systems that have nothing to do with cryptocurrency.
 
-For C++ repositories, there are two relevant variables in `config.mk`:
-- `SOURCES`, a list of C++ source files to compile;
-- `CXXFLAGS`, the options that are passed to the C++ compiler.
+This is not an educational content farm. Every section is designed to pass a single editorial test: Does the reader end the section able to make a materially better business, architecture, or risk decision than they were before they read it?
 
-If the `SOURCES` variable is not set, the Signaloid Cloud Developer Platform compiles all the C and C++ files in the `src` folder.
+🏗️ The Architecture Funnel: 3 Interlocking Series
+The brief is structured as a commercial and architectural funnel: Attention → Decision → Translation.
 
+Series 1: Steal the Architecture (The Flagship)
+Transfers the mental model. It takes 5 core patterns from Ethereum's L2 stack and translates them into enterprise design moves.
 
-#### 🎓 Example
-The following example shows a `src/` folder for a repository, containing one C++ source file (`main.cpp`) and a `config.mk` to modify the build parameters.
-```
-src/
-├── config.mk
-└── main.cpp
-```
+Steal Ethereum's Layering Model: From L1/L2 separation to Core System / Specialized Execution Layer.
+Steal the Rollup Model for Enterprise AI: Execute locally at the edge, batch evidence, settle centrally.
+Steal the Sequencer: The missing enterprise primitive for ordering, priority, authorization, and evidence emission.
+Steal Data Availability: Moving from database log entries to the Enterprise Evidence Availability Layer.
+Steal Settlement: The Trust Stack (Identity → Execution → Evidence → Verification → Settlement).
+Series 2: Architecture ROI
+Transfers the economic reasoning. Every architecture decision is a capital allocation.
 
-In this repository, the file [`src/config.mk`](./src/config.mk) contains
-```makefile
-SOURCES  = main.cpp
-CXXFLAGS = -DDEBUG
-```
-This tells the Signaloid Cloud Developer Platform to build the [`main.cpp`](./src/main.cpp) file using the compiler flag `-DDEBUG` (i.e., defining the symbol `DEBUG`).
+When is an L2 actually cheaper?
+The economics of the Sequencer (Who captures the value of ordering?)
+ZK: When is the proof actually worth paying for?
+The cost of verification (Trust vs. Verification as economic substitutes).
+Build vs. Buy vs. Rollup: The decision framework for executives.
+Series 3: Crypto Architecture → Industrial Architecture
+Translates the decisions into the operational language of specific industries.
 
-### Headers
-Place your header files in the `src` folder. This folder is part of the build include path.
+Factories: What Ethereum teaches us about ISA-95 and production records.
+Logistics: What Rollups teach us about ASN/EDI and batch settlement.
+Mobility: What Sequencers teach us about fleet priority and intersection precedence.
+Supply Chains: What Data Availability teaches us about verifiable dashboards.
+Industrial Compliance: What ZK teaches us about proving compliance without exposing sensitive data (GCC relevance included).
+🛡️ The Methodology: Why This is Different
+Architecture writing often fails by sliding between analogy and identity — starting with "this is like a rollup" and ending with "this is a rollup" without ever saying where the analogy breaks.
 
-### Mixing C++ and C
-It is possible to include C source files in your C++ project. To do so, first, make sure your source files have the appropriate declarations to work with C++ (`extern "C"`). You can then simply add the source files to the build process by adding them to the `SOURCES` list in `config.mk`.
+This document is held to a strict, triple-lock editorial standard:
 
-### Libraries
-During the build process, the Signaloid Cloud Developer Platform links the compiled object files against the following libraries:
-- `libc`: the C standard library;
-- `libm`: the C math library (with function prototypes and other definitions in `math.h`);
-- `libstdc++`: the C++ standard library;
-- `UxHw`: a library that exposes functionalities of uncertainty-tracking computer architectures (with function prototypes and other definitions in `uxhw.h`).
+Sourced & Canonical: Every non-trivial empirical claim is cited (EIPs, rollup specs, distributed systems literature). Over 80 IEEE-numbered references.
+Named Counterarguments: Every single episode includes a Counterarguments & Limitations section. We surface the failure modes of our own analogies before a reviewer does. We steelman the critique.
+Explicit Scope: Where we use a metaphor, we name it as a metaphor and specify its scope.
 
-`UxHw` allows applications to access and inject uncertainty information into the underlying microarchitectures. You can find out more about `UxHw` in the [UxHw documentation](https://docs.signaloid.dev/).
+🎯 Who This is For
+CTOs & Technical Founders looking for architecture patterns that scale without linear cost increases.
+Enterprise & Solutions Architects tired of database-as-integration-layer anti-patterns.
 
-## 🍰 Accessing Your GitHub Repository from the Signaloid Cloud Developer Platform
-There are two ways to access a GitHub repository from the Signaloid Cloud Developer Platform.
-
-### Option 1:  Using the “Add to signaloid.io” Button
-This first option makes it easiest for you (and other GitHub users) to run your repository on the Signaloid Cloud Developer Platform. Edit the snippet at the top of this `README.md` to include the URL of your Git repository.
-
-The text you need to change is (replacing the text `<your repository URL here>`):
-```html
-[<img src="https://assets.signaloid.io/add-to-signaloid-cloud-logo-dark-v6.svg#gh-dark-mode-only" alt="[Add to signaloid.io]" height="30">](https://signaloid.io/repositories?connect=<your repository URL here>#gh-dark-mode-only)
-[<img src="https://assets.signaloid.io/add-to-signaloid-cloud-logo-light-v6.svg#gh-light-mode-only" alt="[Add to signaloid.io]" height="30">](https://signaloid.io/repositories?connect=<your repository URL here>#gh-light-mode-only)
-```
-
-Next, go to the repository's Github page and click on the “Add to signaloid.io” button.
-
-### Option 2: Manually Adding Repositories to the Signaloid Cloud Developer Platform
-A second option is to manually add a repository to the Signaloid Cloud Developer Platform. To do so, follow these steps:
-1. Log in to the Signaloid Cloud Developer Platform at [https://signaloid.io/](https://signaloid.io/). If you do not already have an account, you can create one for free in just three clicks.
-2. Click on the `Repositories` tab in the menu on the left side of the screen (you might need to go through the menu icon on mobile screens).
-3. Give the Signaloid Cloud Developer Platform permission to access your repositories, using the blue GitHub "Login" button.
-4. Click on the green button (Connect to Repositories). All your repositories will appear in a list. Add the relevant repository.
-5. Your repository should now appear in the UI.
+Partially reviewed by z.ai and perplexity research
+AI Leaders struggling to combine local inference speed with central auditability.
+Industrial IoT / OT Engineers designing factory, logistics, and mobility systems.
+Web3 Architects who want to understand how to bridge crypto patterns to enterprise ROI.
