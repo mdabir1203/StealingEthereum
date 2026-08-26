@@ -76,7 +76,6 @@ This document is held to a strict, triple-lock editorial standard:
 ## 📂 Repository Contents
 
 - `Stealing-Ethereum-Architecture-Brief.pdf` — The complete editorial brief (v1.0).
-- `Bibliography.md` — The full 80+ reference list in Markdown format for easy linking.
 
 ---
 
